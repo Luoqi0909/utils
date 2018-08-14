@@ -32,7 +32,8 @@ public class JdbcUtils1 {
 		}
 	}
 
-	public  static Connection getConnection() throws SQLException {
+	public  static Connection getConnection(String ServerName) throws SQLException {
+		
 		return  DriverManager.getConnection(prop.getProperty("url"), prop.getProperty("username"), prop.getProperty("password"));
 	}
 }
